@@ -22,7 +22,7 @@ Pins 1-6 are also connected interally at a near short (.5 ohms)
 pin 7 is NC 
 Pins 2 and 4 are connected to the sleave of the filament. 
 
-# The tube works like this
+# How the GSH-2 works
 Pins 1-6 (filament) is heated at 12V 1.08A (DC) and turns red hot, the filament is covered in an oxide layer which when heated boils off electrons via thermionic emission.
 Simultaneous to this, 10Kvac 200-500Khz (RF) strike voltage is supplied to the tube for a brief moment, the ionizing neon triggers the logic circuit (more on below) which turns off the strike voltage, and turns on a sustaining voltage of 150-200Vdc. Once the ionization is sustained, there will be a negative dark space observable , there will be an ionization cloud surrounding the cathode side of the tube. 
 Whith the filament boiling off electrons , and +150-200Vdc supplied to the anode , electrons from the filament (thermionic emission) with fly through the dark space of the tube , cuasing voltage fluctuations on the anode, these minute mVAC fluctuations are decoupled, biased, and fed into the ADC GPIO P35 of an ESP32. 
@@ -33,6 +33,9 @@ This project overview will be divided into the cathode and anode sides of the tu
 
 # Cathode
 For this project I used a PSU from a Dell PC I salvaged, 12V with the capability to supply 16A. However any supply meeting 12V, at least able to supply 6A would suffice. 
+
+The most complex part of this project was the logic level circuitry (schematic below) 
+![Hand-drawn schematic](logiclevelschematic.jpg)
 
 # Anode 
 
