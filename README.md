@@ -15,6 +15,8 @@ In this project I sampled only the low-end of the spectrum, 0-10khz, making this
 There are 7 pins, making it a typical octogonal vacuum-tube style base. Pin 7 is NC. 
 From looking at the gap, moving clockwise from the left pin of the gap to right, count 1-7.
 
+![Tube_display](gshpic2.jpg)
+
 Pins 3-5 are connected internally at a near short (.5 ohms)
 Pins 1-6 are also connected interally at a near short (.5 ohms) 
 pin 7 is NC 
