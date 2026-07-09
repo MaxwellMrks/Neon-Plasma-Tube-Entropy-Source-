@@ -2,6 +2,8 @@
 Using the Ghs-2 Soviet noise tube I created a scientific instrument in order to study ionization in neon. 
 This instrument doubles as a random number generator, AC voltage fluctuations are decoupled from the anode side of the tube, biased, then fed into ADC pin of an ESP32. The mV voltage fluctuations are caused by a combination of shot noise, ionization events, and other factors. More on that below. 
 
+![GSH-2 at full ionization with 10kvac RF flyback](gsh_display.jpg)
+
 # The GSH-2 
 
 The GSH-2 is a 1970s broadband noise tube manufactured in the USSR, these were used predominatnely for military purposes, namely random number generation. 
