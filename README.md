@@ -11,11 +11,13 @@ The glass envelope , is 14 inches long , 5mm diameter at the thinnest point, and
 This tube is optimized for 7 - 10Ghz signals, and was used mostely in radar and microwave equipqment. 
 In this project I sampled only the low-end of the spectrum, 0-10khz, making this a relativily doable task for any hobbiest, without RF equipment. 
 
+![tube_display](gshpic1.jpg)
+
 
 There are 7 pins, making it a typical octogonal vacuum-tube style base. Pin 7 is NC. 
 From looking at the gap, moving clockwise from the left pin of the gap to right, count 1-7.
 
-![Tube_display](gshpic2.jpg)
+![tube_display](gshpic2.jpg)
 
 Pins 3-5 are connected internally at a near short (.5 ohms)
 Pins 1-6 are also connected interally at a near short (.5 ohms) 
