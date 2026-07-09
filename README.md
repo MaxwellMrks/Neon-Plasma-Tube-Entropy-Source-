@@ -30,5 +30,7 @@ This project overview will be divided into the cathode and anode sides of the tu
 # Cathode
 For this project I used a PSU from a Dell PC I salvaged, 12V with the capability to supply 16A. However any supply meeting 12V, at least able to supply 6A would suffice. 
 
+# Anode 
 
+# Mistakes I made 
 
