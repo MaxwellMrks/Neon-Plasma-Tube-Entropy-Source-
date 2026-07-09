@@ -36,9 +36,9 @@ This project overview will be divided into the cathode and anode sides of the tu
 # Cathode
 For this project I used a PSU from a Dell PC I salvaged, 12V with the capability to supply 16A. However any supply meeting 12V, at least able to supply 6A would suffice. 
 
-The most complex part of this project was the logic level circuitry (schematic below) 
+The most complex part of this project was the logic level circuitry.
 ![Hand-drawn schematic](logiclevelschematic.jpg)
-
+I had to figure out a way to send a signal that the tube was sucessfuly ionized, in order to shut off the strike voltage, and in turn activate the sustained DC lower voltage. The challenge was isolating the HV from the low voltage logic circutiry while still sending an accurate and timely signal. After much thought, I decided to create a custom high voltage octocoupler, settling for a Ne-2 neon bulb enclosed in a darkspace with an LDR. When the tube is successfully ionzied, the Ne-2 bulb is instantaneously ionized as well, flooding light into the dark enclosure, and allowing current through the photoresistor. This causes the comparater output to go high , which also causes the CD4043B output to go high as well. The outputting signal leads to Mosfet 1 which allows current to flow to ground from the DC boost converter, sustaining the ionization of the tube. The outputting signal from the SR latch (CD4043B) also turns off the 10kvac strike voltage via inverted signal. 
 # Anode 
 
 # Mistakes I made 
