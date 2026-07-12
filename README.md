@@ -1,4 +1,4 @@
-# Neon-Plasma-Tube-Entropy-Source-
+# Neon-Plasma-Tube-Entropy-Source- [Still Under Development]
 Using the Ghs-2 Soviet noise tube I created a scientific instrument in order to study ionization in neon. 
 This instrument doubles as a random number generator, AC voltage fluctuations are decoupled from the anode side of the tube, biased, then fed into ADC pin of an ESP32. The mV voltage fluctuations are caused by a combination of shot noise, ionization events, and other factors. More on that below. 
 
@@ -6,9 +6,9 @@ This instrument doubles as a random number generator, AC voltage fluctuations ar
 
 # The GSH-2 
 
-The GSH-2 is a 1970s broadband noise tube manufactured in the USSR, these were used predominatnely for military purposes, namely random number generation. 
-The glass envelope , is 14 inches long , 5mm diameter at the thinnest point, and 50 mm in diamater at the thickest.  
-This tube is optimized for 7 - 10Ghz signals, and was used mostely in radar and microwave equipqment. 
+The GSH-2 is a 1970s broadband noise tube manufactured in the USSR, these were predominantly used for military purposes, namely random number generation. 
+The glass envelope , is 14 inches long , 5mm diameter at the thinnest point.  
+This tube is optimized for 7 - 10Ghz signals, and was used mostly in radar and microwave equipqment. 
 In this project I sampled only the low-end of the spectrum, 0-10khz, making this a relativily doable task for any hobbiest, without RF equipment. 
 
 ![tube_display](gshpic1.jpg)
@@ -27,7 +27,7 @@ Pins 2 and 4 are connected to the sleave of the filament.
 # How the GSH-2 works
 Pins 1-6 (filament) is heated at 12V 1.08A (DC) and turns red hot, the filament is covered in an oxide layer which when heated boils off electrons via thermionic emission.
 Simultaneous to this, 10Kvac 200-500Khz (RF) strike voltage is supplied to the tube for a brief moment, the ionizing neon triggers the logic circuit (more on below) which turns off the strike voltage, and turns on a sustaining voltage of 150-200Vdc. Once the ionization is sustained, there will be a negative dark space observable , there will be an ionization cloud surrounding the cathode side of the tube. 
-Whith the filament boiling off electrons , and +150-200Vdc supplied to the anode , electrons from the filament (thermionic emission) with fly through the dark space of the tube , cuasing voltage fluctuations on the anode, these minute mVAC fluctuations are decoupled, biased, and fed into the ADC GPIO P35 of an ESP32. 
+Whith the filament boiling off electrons , and +150-200Vdc supplied to the anode , electrons from the filament (thermionic emission) with fly through the dark-space of the tube , causing voltage fluctuations on the anode, these mVAC fluctuations are decoupled, biased, and fed into the ADC GPIO P35 of an ESP32. 
 
 
 # Instrument Overview
@@ -42,4 +42,13 @@ I had to figure out a way to send a signal that the tube was sucessfuly ionized,
 # Anode 
 
 # Mistakes I made 
+I made many mistakes while working on this project, especially considering this current iteration was completed in 25 days exactly. I built this for OpenSauce 2026, and as of today [7.12.26]. I'll be exhibiting this project in 3 days. 
+
+The largest mistake I made, is unfortunetly one I'm still looking to solve, one night after leaving the tube running for an extended period, a plethora of magic smoke emerged from the cathode side of my instrument..... I panicked, to put it lightly. I soon discovered, after some investigation, the 'Zorza module' completetly cooked itself, and turned into a resistor essnetially, electrons in the secondary being pulled forth by the positive DC voltage being applied at the Anode node. I forgot to add a diode.....
+
+After adding the 10kv rated diode to the flyback rail, the tube wouldn't strike. I haven't figured out why, so for now I'm running the GSH-2 instrument in short periods of time to avoid barbequing another flyback secondary. 
+
+During the conceptual work of this project, I envisioned a positive ionized column, on the anode side. The entirety of the tube ionized.  instead in 25 days I only was able to get a cathode glow, a ionization cloud surrounding the cathode. I believe this is due to inadequet current being supplied, after measuring the DC supply, I was measuring 30mA which is extremely underdriven. I unfortunately haven't had time to work on this, in further iterations I hope to extend the positive column and get full ionization. The unfortunate reality is I'm not sure how this tube is supposed to be driven, as there is sparse to no information online about the GSH-2.
+
+
 
