@@ -32,10 +32,14 @@ Whith the filament boiling off electrons , and +150-200Vdc supplied to the anode
 
 # Quick Note About This Current Iteration 
 
-Despite what's stated above, which is how I think the tube is supposed to function, my instrument doesn't function like that/as intended (yet). When I was pondering this project, and got the tube in the mail, I started working on mental/conceptual work, thinking about ways to extract the voltage fluctuations from this tube and how it was made to function. I beleive I was correct, in that the anode is where the fluctuations are measured, I imagined the electron avalanche being initiated by the strike voltage and shotnoise, electrons flying through the dark space towards the anode and positive 200 volt field, ionizing the neon en route. (As seen in the first picture when the tube was being ionized by 10kv-20kv RF). Unfortunately after I built this I only got a cathode glow, a slight ionization cloud surrounding the cathode. I was dismayed to be honest, my build wasn't living upto my mental models of how the physics and circut was supposed to behave. To my pleasure however, I was in fact reading voltage fluctuations in the mV, decoupled from the anode (or so I thought at the time). My immediate thought was skepticism, what is this is just random electronic noise I'm reading? With the ADC baseline at 1060 refer to 'ADC_Data_Tube_Off' and compare to 'ADC_Data_Tube_On' to compare the fluctuations. Below take note of the ADC waveform and fourier transform graphed. 
+Despite what's stated above, which is how I think the tube is supposed to function, my instrument doesn't function like that/as intended (yet). When I was pondering this project, and got the tube in the mail, I started working on mental/conceptual work, thinking about ways to extract the voltage fluctuations from this tube and how it was made to function. I beleive I was correct, in that the anode is where the fluctuations are measured, I imagined the electron avalanche being initiated by the strike voltage and shotnoise, electrons flying through the dark space towards the anode and positive 200 volt field, ionizing the neon en route. (As seen in the first picture when the tube was being ionized by 10kv-20kv RF). Unfortunately after I built this I only got a cathode glow, a slight ionization cloud surrounding the cathode. (See below).
 
+![dark_glow](Cathodeionization.jpg)
 
+I was dismayed to be honest, my build wasn't living upto my mental models of how the physics and circut was supposed to behave. To my pleasure however, I was in fact reading voltage fluctuations in the mV, decoupled from the anode (or so I thought at the time). My immediate thought was skepticism, what is this is just random electronic noise I'm reading? With the ADC baseline at 1060 refer to 'ADC_Data_Tube_Off' and compare to 'ADC_Data_Tube_On' to compare the fluctuations. Below take note of the ADC waveform and fourier transform graphed. 
 
+![FFT](FTTTube1.jpg)
+![FFT](FTTTube2.jpg)
 
 # Cathode
 For this project I used a PSU from a Dell PC I salvaged, 12V with the capability to supply 16A. However any supply meeting 12V, at least able to supply 6A would suffice. 
