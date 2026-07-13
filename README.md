@@ -36,7 +36,9 @@ Despite what's stated above, which is how I believe the tube is supposed to func
 
 ![dark_glow](Cathodeionization.jpg)
 
-My build wasn't living upto my mental models of how the physics and circut was supposed to behave. To my pleasure however, I was in fact reading voltage fluctuations in the mV, decoupled from the anode (or so I thought at the time). My immediate thought was skepticism, what is this is just random electronic noise I'm reading? With the ADC baseline at 1060 refer to 'ADC_Data_Tube_Off' and compare to 'ADC_Data_Tube_On' to compare the fluctuations. Below take note of the ADC waveform and fourier transform graphed. The data below proves that the noise is from the plasma and not electrical. When I initially started sampling in the lo-hz spectrum I detected a plasma peak which lowered in average hz as the tube ran. Despite the tube not working as intended, (no positive voltage column) It worked as a functional source of entropy, I ran the the ADC data through an ENT test and received a 7.9, proving randomness and no determinstic electrical switching noise. 
+My build wasn't living upto my mental models of how the physics and circut was supposed to behave. To my pleasure however, I was in fact reading voltage fluctuations in the mV, decoupled from the anode*. My immediate thought was skepticism, what is this is just random electronic noise I'm reading? With the ADC baseline at 1060 refer to 'ADC_Data_Tube_Off' and compare to 'ADC_Data_Tube_On' to compare the fluctuations. Below take note of the ADC waveform and fourier transform graphed. The data below proves that the noise is from the plasma and not electrical. When I initially started sampling in the lo-hz spectrum I detected a plasma peak which lowered in average hz as the tube ran. Despite the tube not working as intended, (no positive voltage column) It worked as a functional source of entropy, I ran the the ADC data through an ENT test and received a 7.9, proving randomness and no determinstic electrical switching noise. 
+
+
 
 ![FFT](FTTTube1.jpg)
 
