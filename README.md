@@ -39,6 +39,8 @@ Despite what's stated above, which is how I think the tube is supposed to functi
 I was dismayed to be honest, my build wasn't living upto my mental models of how the physics and circut was supposed to behave. To my pleasure however, I was in fact reading voltage fluctuations in the mV, decoupled from the anode (or so I thought at the time). My immediate thought was skepticism, what is this is just random electronic noise I'm reading? With the ADC baseline at 1060 refer to 'ADC_Data_Tube_Off' and compare to 'ADC_Data_Tube_On' to compare the fluctuations. Below take note of the ADC waveform and fourier transform graphed. 
 
 ![FFT](FTTTube1.jpg)
+
+
 ![FFT](FTTTube2.jpg)
 
 # Cathode
