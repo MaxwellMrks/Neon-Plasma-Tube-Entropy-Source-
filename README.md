@@ -8,7 +8,7 @@ This instrument doubles as a random number generator, AC voltage fluctuations ar
   
 - Can be used to study neon-plasma behaviors.
 
-- Gsh-2 tube filament successfully undergoes thermionic emission, and the tube sustains at DC post 10kv strike.
+- Gsh-2 tube filament successfully undergoes thermionic emission, and the tube sustains at 195vDC post 10kv strike.
 
 - Due to errors in my circuit design topology the 195vdc/positive field, instead of being present on the intended electrode (on the opposite end of the tube) is instead coupling through the 10kv strike rail.
 
@@ -34,7 +34,7 @@ From looking at the gap, moving clockwise from the left pin of the gap to right,
 ![tube_display](gshpic2.jpg)
 
 Pins 3-5 are connected internally at a near short (.5 ohms)
-Pins 1-6 are also connected interally at a near short (.5 ohms) (filament with oxide coating - produces shotnoise)
+Pins 1-6 are also connected interally at a near short (.5 ohms) (filament with oxide coating - thermionic emission)
 pin 7 is NC 
 Pins 2 and 4 are connected to the sleave of the filament. 
 
