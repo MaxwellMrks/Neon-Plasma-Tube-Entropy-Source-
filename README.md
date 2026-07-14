@@ -4,10 +4,17 @@ This instrument doubles as a random number generator, AC voltage fluctuations ar
 
 # Current Status 
 
-- The instrument currently produces entropy usable for cryptographic purposes from shot-noise and ionization events, post whitening the ADC data was able to achieve 7.9 on ENT testing.
+- The instrument currently produces entropy from shot-noise, ionization events, and other factors. Post whitening, the ADC data was able to achieve 7.9 on ENT testing.
   
 - Can be used to study neon-plasma behaviors.
 
+- Gsh-2 tube filament successfully undergoes thermionic emission, and the tube sustains at DC post 10kv strike.
+
+- Due to errors in my circuit design topology the 195vdc/positive field, instead of being present on the intended electrode (on the opposite end of the tube) is instead coupling through the 10kv strike rail.
+
+- This mis-aligned positive voltage field is causing the electrons boiled off of the filament (1-6) via thermionic emission, and electrons from ionization events to travel up the strike rail to the anode node, decoupling through the three capacitors in series into the esp32 ADC pin.
+
+- This is seemingly fine as an entropy source but causing the ionization cloud to remain on the cathode side, instead of extending throughout the tube. 
   
 ![GSH-2 at full ionization with 10kvac RF flyback](gsh_display.jpg)
 
@@ -27,9 +34,16 @@ From looking at the gap, moving clockwise from the left pin of the gap to right,
 ![tube_display](gshpic2.jpg)
 
 Pins 3-5 are connected internally at a near short (.5 ohms)
-Pins 1-6 are also connected interally at a near short (.5 ohms) 
+Pins 1-6 are also connected interally at a near short (.5 ohms) (filament with oxide coating - produces shotnoise)
 pin 7 is NC 
 Pins 2 and 4 are connected to the sleave of the filament. 
+
+Pin 1,6 - 12Vdc @ 1A (Filament)
+Pin 2,4 - NC
+Pin 3 - 0V , 195vdc boost converter 
+Pin 5 - NC
+Pin 7 - 10KvAc strike rail , and Ne+LDR custom HV octocoupler 
+
 
 # How the GSH-2 works
 Pins 1-6 (filament) is heated at 12V 1.08A (DC) and turns red hot, the filament is covered in an oxide layer which when heated boils off electrons via thermionic emission.
