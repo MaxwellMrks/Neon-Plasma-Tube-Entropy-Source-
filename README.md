@@ -44,11 +44,12 @@ My build wasn't living upto my mental models of how the physics and circut was s
 ![Fourier](3134khz.jpg)
 
 
+Sampling at 5khz
+
 
 ![FFT](FTTTube1.jpg)
-
-
 ![FFT](FTTTube2.jpg)
+
 
 # Cathode
 For this project I used a PSU from a Dell PC I salvaged, 12V with the capability to supply 16A. However any supply meeting 12V, at least able to supply 6A would suffice. 
