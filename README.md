@@ -38,10 +38,10 @@ Despite what's stated above, which is how I believe the tube is supposed to func
 
 My build wasn't living upto my mental models of how the physics and circut was supposed to behave. To my pleasure however, I was in fact reading voltage fluctuations in the mV, decoupled from the anode*. My immediate thought was skepticism, this could be random electronic noise I'm reading instead of fluctuations caused by ionization events and shot-noise. With the ADC baseline at 1060 refer to 'ADC_Data_Tube_Off' and compare to 'ADC_Data_Tube_On' to compare the fluctuations. Below take note of the ADC waveform and fourier transform graphed. Initially I was only sampling from 0-5hz, take note of a small peak around 3khz-4khz. I was worried it was electrical noise (from the DC switching boost converter) however I observed the peak decrease in frequency as the tube ran, around 100-500hz. I hypothesize this is due to the increasing tempurature of the tube, changing the frequency of a relaxation oscillation. I ran the tube for extended periods from a cold start, and each time observed the same effect - the peak starting around 3600hz would shift to a lower hz. I then started to sample higher frequencies up to 10khz. I observed more peaks, one around 7khz which I did identify as electrical noise. Via python I subtracted this peak , (listening to the advice of my friends on the R/Physics sub-reddit...). Notice however the 3khz-4khz plasma peak remains, shifting slighly in hz. (see below). 
 
-![dark_glow](10khzFTTT)
-
-
-When I initially started sampling in the lo-hz spectrum I detected a plasma peak which lowered in average hz as the tube ran. Despite the tube not working as intended, (no positive voltage column) It worked as a functional source of entropy, I ran the the ADC data through an ENT test and received a 7.9. 
+![Fourier](3244khz.jpg)
+![Fourier](3202khz.jpg)
+![Fourier](3194khz.jpg)
+![Fourier](3134khz.jpg)
 
 
 
