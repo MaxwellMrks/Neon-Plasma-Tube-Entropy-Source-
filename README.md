@@ -44,7 +44,7 @@ My build wasn't living upto my mental models of how the physics and circut was s
 ![Fourier](3134khz.jpg)
 
 
-Sampling at 5khz
+Sampling at 5khz, tube off vs on 
 
 
 ![FFT](FTTTube1.jpg)
