@@ -2,6 +2,8 @@
 Using the Ghs-2 Soviet noise tube I created a scientific instrument in order to study ionization in neon. 
 This instrument doubles as a random number generator, AC voltage fluctuations are decoupled from the anode side of the tube, biased, then fed into ADC pin of an ESP32. The mV voltage fluctuations are caused by a combination of shot noise, ionization events, and other factors. More on that below. 
 
+![Final_build](CompletedRNG.jpg)
+
 # Current Status 
 
 - The instrument currently produces entropy from shot-noise, ionization events, and other factors. Post whitening, the ADC data was able to achieve 7.9 on ENT testing.
@@ -84,6 +86,8 @@ While the most complex parts of this project are predominantly on the cathode si
 
 
 In addition to the biasing network I also added an OLED, with live diagnostics and Fourier Transforms. I originally sampled at 5khz then moved up to 10khz. The live transforms allow me to see the noise spectrum in real time, allowing me to detect any EMI, either native to the system or permeating my system from nearby electronics - more on that below in the next section. 
+
+![OLED_Of_FTT](OLED.jpg)
 
 As previously stated, this instrument was made in 25 days for OpenSauce 2026, and I wanted to include an interactive component, so I added a thermal printer, and speaker. The speaker when turned on plays direct ADC wave form coming from the tube. The thermal printer prints out random numbers, and a dice roll for viewers to take home. I didn't include these in the schematic above however these applications are still included in the code. 
 
