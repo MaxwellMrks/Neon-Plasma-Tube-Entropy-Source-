@@ -78,9 +78,16 @@ For this project I used a PSU from a Dell PC I salvaged, 12V with the capability
 The most complex part of this project was the logic level circuitry.
 ![Hand-drawn schematic](Schematic.jpg)
 I had to figure out a way to send a signal that the tube was successfully ionized, in order to shut off the strike voltage, and in turn activate the sustained DC lower voltage. The challenge was isolating the HV from the low voltage logic circuitry while still sending an accurate and timely signal. After much thought, I decided to create a custom high voltage optocoupler, settling for a Ne-2 neon bulb enclosed in a dark space with an LDR. When the tube is successfully ionized, the Ne-2 bulb is instantaneously ionized as well, flooding light into the dark enclosure, and allowing current through the photoresistor. This causes the comparator output to go high, which also causes the CD4043B output to go high as well. The outputting signal leads to Mosfet 1 which allows current to flow to ground from the DC boost converter, sustaining the ionization of the tube. The outputting signal from the SR latch (CD4043B) also turns off the 10kvac strike voltage via inverted signal. 
-# Anode 
-While the most complex parts of this project are predominantly on the cathode side, the anode side is of no less importance. There 
 
+# Anode 
+While the most complex parts of this project are predominantly on the cathode side, the anode side is of no less importance. The current throughout the tube fluctuates, these fluctuations are decoupled through three capacitors in series, each one rated for 3kv at 33pF. These capacitors are necessary to decouple the current into a fluctuating voltage. Current can't pass through capacitors in series, so what is left is a sine wave of fluctuating charges, or potential differences - almost ready to be sampled through the ADC (analogue to digital conversion) pin of an ESP32. Prior to sampling however, I had to bias this sine wave of fluctuating charges originating from the ionization events and shot noise. Microcontroller pins can be damaged by negative voltage, so I had to figure out what voltage to bias the signal at. I decided to go as relatively low as possible and bias it at 1 volt in order to see the most miniscule of fluctuations. Later on, I added a potentiometer to the biasing network to add variability.
+
+
+In addition to the biasing network I also added an OLED, with live diagnostics and Fourier Transforms. I originally sampled at 5khz then moved up to 10khz. The live transforms allow me to see the noise spectrum in real time, allowing me to detect any EMI, either native to the system or permeating my system from nearby electronics - more on that below in the next section. 
+
+As previously stated, this instrument was made in 25 days for OpenSauce 2026, and I wanted to include an interactive component, so I added a thermal printer, and speaker. The speaker when turned on plays direct ADC wave form coming from the tube. The thermal printer prints out random numbers, and a dice roll for viewers to take home. I didn't include these in the schematic above however these applications are still included in the code. 
+
+# Enclosure, cooling, and EMI interference 
 
 
 # Mistakes I made 
