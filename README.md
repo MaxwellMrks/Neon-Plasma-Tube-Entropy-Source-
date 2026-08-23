@@ -89,6 +89,20 @@ As previously stated, this instrument was made in 25 days for OpenSauce 2026, an
 
 # Enclosure, cooling, and EMI interference 
 
+# EMI
+
+The largest challenge was shielding this instrument from EMI - I drove myself slightly insane! I mean, photons are everywhere how do I keep them out of my enclosure? Well, I didn't. For Plasma Entropy Source [V.2] however this is my primary goal - complete EMI shielding. 
+For this project, I used 8-gauge coaxial line I found in my mom's closet. I wired the insulation of the cord to ground. I also put the entirety of the anode in a faraday cage and grounded that as well. Despite this meager effort at EMI deterring, I didn't get anywhere - primarily due to the ultimatum I had with OpenSauce.
+I knew I wasn't keeping runaway photons out after turning on the live Fourier transform, turning on my tesla coil, and watching the noise spectrum skyrocket.
+
+# Enclosure 
+
+I bought a 3D printer in order to complete this project in a semi-professional manner. I also had to teach myself cad (fusion-360) in order to complete this project, this took far more time than the circuitry.
+
+# Cooling
+
+With an infrared thermometer I measured the cathode at 200 degrees F, to no surprise as this is a hot cathode tube. I decided to supply multiple fans and a cooling system to vent the hot air from the tube, this ended up working surprisingly well. 
+
 
 # Mistakes I made 
 I made many mistakes while working on this project, especially considering this current iteration was completed in 25 days exactly. I built this for OpenSauce 2026, and as of today [7.12.26]. I'll be exhibiting this project in 3 days. 
