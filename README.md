@@ -101,11 +101,11 @@ I knew I wasn't keeping runaway photons out after turning on the live Fourier tr
 
 # Enclosure 
 
-I bought a 3D printer in order to complete this project in a semi-professional manner. I also had to teach myself cad (fusion-360) in order to complete this project, this took far more time than the circuitry.
+I bought a 3D printer in order to complete this project in a semi-professional manner. I also had to teach myself cad (fusion-360) in order to complete this project, this took far more time than the circuitry. 
 
 # Cooling
 
-With an infrared thermometer I measured the cathode at 200 degrees F, to no surprise as this is a hot cathode tube. I decided to supply multiple fans and a cooling system to vent the hot air from the tube, this ended up working surprisingly well. 
+With an infrared thermometer I measured the cathode at 200 degrees F, to no surprise as this is a hot cathode tube, and had 1 amp of current running through it. I decided to add multiple fans and a cooling system to vent the hot air from the tube, this ended up working surprisingly well. Enclosure design below. 
 
 
 # Mistakes I made 
