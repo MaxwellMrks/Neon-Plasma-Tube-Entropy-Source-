@@ -92,7 +92,7 @@ In addition to the biasing network I also added an OLED, with live diagnostics a
 As previously stated, this instrument was made in 25 days for OpenSauce 2026, and I wanted to include an interactive component, so I added a thermal printer, and speaker. The speaker when turned on plays direct ADC wave form coming from the tube. The thermal printer prints out random numbers, and a dice roll for viewers to take home. I didn't include these in the schematic above however these applications are still included in the code. 
 
 # Enclosure, EMI, and Thermal Managment
-![Diagram_ofInstrument](Enclosure.jpg)
+![Diagram_ofInstrument](Enclosure.JPG)
 
 The largest challenge was shielding this instrument from EMI - I drove myself slightly insane! I mean, photons are everywhere how do I keep them out of my enclosure? Well, I didn't. For Plasma Entropy Source [V.2] however this is my primary goal - complete EMI shielding. 
 For this project, I used 8-gauge coaxial line I found in my mom's closet. I wired the insulation of the cord to ground. I also put the entirety of the anode in a faraday cage and grounded that as well. Despite this meager effort at EMI deterring, I didn't get anywhere - primarily due to the ultimatum I had with OpenSauce.
