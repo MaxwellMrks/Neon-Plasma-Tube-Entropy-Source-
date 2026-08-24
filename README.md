@@ -91,21 +91,16 @@ In addition to the biasing network I also added an OLED, with live diagnostics a
 
 As previously stated, this instrument was made in 25 days for OpenSauce 2026, and I wanted to include an interactive component, so I added a thermal printer, and speaker. The speaker when turned on plays direct ADC wave form coming from the tube. The thermal printer prints out random numbers, and a dice roll for viewers to take home. I didn't include these in the schematic above however these applications are still included in the code. 
 
-# Enclosure, cooling, and EMI interference 
-
-# EMI
+# Enclosure, EMI, and Thermal Managment
+![Diagram_ofInstrument](Enclosure.jpg)
 
 The largest challenge was shielding this instrument from EMI - I drove myself slightly insane! I mean, photons are everywhere how do I keep them out of my enclosure? Well, I didn't. For Plasma Entropy Source [V.2] however this is my primary goal - complete EMI shielding. 
 For this project, I used 8-gauge coaxial line I found in my mom's closet. I wired the insulation of the cord to ground. I also put the entirety of the anode in a faraday cage and grounded that as well. Despite this meager effort at EMI deterring, I didn't get anywhere - primarily due to the ultimatum I had with OpenSauce.
-I knew I wasn't keeping runaway photons out after turning on the live Fourier transform, turning on my tesla coil, and watching the noise spectrum skyrocket.
-
-# Enclosure 
+I knew I wasn't keeping runaway electro-magnetism out after turning on the live Fourier transform, turning on my tesla coil, and watching the noise spectrum skyrocket.
 
 I bought a 3D printer in order to complete this project in a semi-professional manner. I also had to teach myself cad (fusion-360) in order to complete this project, this took far more time than the circuitry. 
 
-# Cooling
-
-With an infrared thermometer I measured the cathode at 200 degrees F, to no surprise as this is a hot cathode tube, and had 1 amp of current running through it. I decided to add multiple fans and a cooling system to vent the hot air from the tube, this ended up working surprisingly well. Enclosure design below. 
+With an infrared thermometer I measured the cathode at 200 degrees F, to no surprise as this is a hot cathode tube which had 1 amp current running through it. I decided to add multiple fans and a cooling system to vent the hot air from the tube, this ended up working surprisingly well. As seen in the diagram, I have a fan on the anode side of the instrument which projects cool air through the glass tube along the GSH-2. This hot air is then vented through the top of the cathode side, through another fan spinning in reverse.
 
 
 # Mistakes I made 
